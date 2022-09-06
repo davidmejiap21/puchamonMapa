@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png">
+    <title>Puchamon-Mapa</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+
+<body>
+
+    <main>
+        <section id="jugar">
+            <div>
+                <h1 class="titulo"> Puchamon </h1>
+
+            </div>
+
+
+
+            <div>
+                <button id="boton-jugar">Jugar</button>
+            </div>
+
+        </section>
+        <section id="seleccionar-puchamon">
+            <h1 class="titulo"> Puchamon </h1>
+            <h2>Elige tu puchamon </h2>
+
+            <div class="tarjetas" id="tarjetas-puchamon">
+
+
+            </div>
+
+            <button id="boton-puchamon">Seleccionar</button>
+        </section>
+
+        <section id="ver-mapa">
+            <h1 class="titulo"> Recorre el Mapa  </h1>
+                <canvas id="mapa">
+
+                </canvas>
+                <button class="boton-movimiento" id="up" onmouseup="detenerMovimiento()" onmousedown="moverArriba()">
+                    ⬆️</button>
+
+                <div class="botones-movimientos">
+                    <button class="boton-movimiento" id="left" onmouseup="detenerMovimiento()"
+                        onmousedown="moverIzquierda()"> ⬅️</button>
+
+                    <button class="boton-movimiento" id="down" onmouseup="detenerMovimiento()"
+                        onmousedown="moverAbajo()">
+                        ⬇️</button>
+                    <button class="boton-movimiento" id="right" onmouseup="detenerMovimiento()"
+                        onmousedown="moverDerecha()"> ➡️</button>
+
+                </div>
+        </section>
+
+
+        <section id="seleccionar-ataque">
+            <h1 class="titulo"> Puchamon</h1>
+
+            <h2>Elige tu ataque: </h2>
+            <div id="botones-ataques">
+
+            </div>
+
+            <div id="mensajes">
+                <div id="resultado"> Que inicien los vergazos</div>
+
+
+                <section id="reiniciar">
+                    <button id="boton-reiniciar">Jugar de nuevo</button>
+                </section>
+            </div>
+
+
+            <div class="ataques">
+                <div class="cuadros-combate">
+                    <p id="victorias-jugador">0</p>
+                    <div id="imagen-puchamon-jugador"></div>
+                    <p id="puchamon-jugador">Puchamon</p>
+                    <div id="ataques-del-jugador"></div>
+
+                </div>
+                <div class="cuadros-combate">
+                    <p id="victorias-enemigo">0</p>
+                    <div id="imagen-puchamon-enemigo"></div>
+                    <p id="puchamon-enemigo">Puchamon</p>
+                    <div id="ataques-del-enemigo"></div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+    </main>
+    <script src="js/puchamon.js"></script>
+</body>
+
+</html>
