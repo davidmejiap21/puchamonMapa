@@ -16,6 +16,9 @@ const tarjetasPuchamon = document.getElementById("tarjetas-puchamon");
 const contenedorBotones = document.getElementById("botones-ataques")
 const botonJugar = document.getElementById('boton-jugar')
 const sectionJugar = document.getElementById('jugar')
+const sectionInstrucciones = document.getElementById('instrucciones')
+const botonInstrucciones= document.getElementById('boton-instrucciones')
+const botonVolverInicio= document.getElementById('volver-inicio')
 
 const sectionVerMapa = document.getElementById('ver-mapa')
 const mapa = document.getElementById('mapa')
@@ -237,11 +240,22 @@ function pantallaEmpezarAJugar(){
     
 
     sectionJugar.style.display = 'flex'
+    sectionInstrucciones.style.display = 'none'
     sectionVerMapa.style.display = "none"
     sectionSeleccionarAtaque.style.display = "none"
     sectionSeleccionarPuchamon.style.display = "none"
-   
+    botonInstrucciones.addEventListener('click',abrirSectionInstrucciones)
 
+}
+
+function abrirSectionInstrucciones(){
+    sectionInstrucciones.style.display = 'flex'
+
+    sectionJugar.style.display = 'none'
+    sectionVerMapa.style.display = "none"
+    sectionSeleccionarAtaque.style.display = "none"
+    sectionSeleccionarPuchamon.style.display = "none"
+    botonVolverInicio.addEventListener('click', pantallaEmpezarAJugar)
 }
 
 function iniciarJuego() {

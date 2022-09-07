@@ -13,6 +13,8 @@
 <body>
 
     <main>
+
+
         <section id="jugar">
             <div>
                 <h1 class="titulo"> Puchamon </h1>
@@ -20,10 +22,48 @@
             </div>
 
 
-
+            <button id="boton-instrucciones">Instrucciones</button>
             <div>
                 <button id="boton-jugar">Jugar</button>
             </div>
+
+        </section>
+        <section id="instrucciones">
+            <div id="cuadro-instrucciones">
+                <h1>Como Jugar</h1>
+                <div>
+                    <div>Cuando selecciones a tu personaje debes recorrer el mapa para elegir quien sera tu
+                        contrincante. </div>
+                    <div> Cuando entres en combate debes tener varias cosas claras: </div>
+                    <div> 1. El combate es por turnos, para ganar debes lograr conseguir mas puntos que el enemigo al
+                        final de 5 turnos. </div>
+                    <div> 2. Existen tres tipos de ataques Fuego, Agua y Planta, podras reconocerlos por el icono que
+                        tienen al lado de su nombre. </div>
+                    <div>3. Para conseguir puntos debes utilizar un ataque de un tipo que le gane al elemento del ataque
+                        que el enemigo utilice. (cada ataque solo puedes utilizarlo una vez) </div>
+
+                </div>
+                <div id="instrucciones-tipos">
+                    <div>
+                        AGUA le gana a FUEGO
+
+                    </div>
+                    <div>
+                        FUEGO le gana a PlANTA
+
+                    </div>
+                    <div>
+                        PLANTA le gana a AGUA
+
+                    </div>
+
+                    <div> 
+                        <button id="volver-inicio">Volver</button>
+                    </div>
+                </div>
+
+            </div>
+
 
         </section>
         <section id="seleccionar-puchamon">
@@ -39,24 +79,23 @@
         </section>
 
         <section id="ver-mapa">
-            <h1 class="titulo"> Recorre el Mapa  </h1>
-                <canvas id="mapa">
+            <h1 class="titulo"> Recorre el Mapa </h1>
+            <canvas id="mapa">
 
-                </canvas>
-                <button class="boton-movimiento" id="up" onmouseup="detenerMovimiento()" onmousedown="moverArriba()">
-                    ⬆️</button>
+            </canvas>
+            <button class="boton-movimiento" id="up" onmouseup="detenerMovimiento()" onmousedown="moverArriba()">
+                ⬆️</button>
 
-                <div class="botones-movimientos">
-                    <button class="boton-movimiento" id="left" onmouseup="detenerMovimiento()"
-                        onmousedown="moverIzquierda()"> ⬅️</button>
+            <div class="botones-movimientos">
+                <button class="boton-movimiento" id="left" onmouseup="detenerMovimiento()"
+                    onmousedown="moverIzquierda()"> ⬅️</button>
 
-                    <button class="boton-movimiento" id="down" onmouseup="detenerMovimiento()"
-                        onmousedown="moverAbajo()">
-                        ⬇️</button>
-                    <button class="boton-movimiento" id="right" onmouseup="detenerMovimiento()"
-                        onmousedown="moverDerecha()"> ➡️</button>
+                <button class="boton-movimiento" id="down" onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">
+                    ⬇️</button>
+                <button class="boton-movimiento" id="right" onmouseup="detenerMovimiento()"
+                    onmousedown="moverDerecha()"> ➡️</button>
 
-                </div>
+            </div>
         </section>
 
 
@@ -66,8 +105,8 @@
             <h2>Elige tu ataque: </h2>
             <div id="botones-ataques">
 
-            </div>
 
+            </div>
             <div id="mensajes">
                 <div id="resultado"> Que inicien los vergazos</div>
 
@@ -76,8 +115,6 @@
                     <button id="boton-reiniciar">Jugar de nuevo</button>
                 </section>
             </div>
-
-
             <div class="ataques">
                 <div class="cuadros-combate">
                     <p id="victorias-jugador">0</p>
@@ -93,6 +130,9 @@
                     <div id="ataques-del-enemigo"></div>
 
                 </div>
+
+
+
 
 
             </div>
